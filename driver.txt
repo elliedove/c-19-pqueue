@@ -1,0 +1,49 @@
+queue1 dump after inserting 4 patients (Nick, Sam, Liz, Eva):
+(((4:Eva)2:Nick)1:Sam(5:Liz))
+
+queue2 dump after inserting 2 patients (John, Mia):
+((3:John)3:Mia)
+
+Contents of queue1 after merging with queue2:
+Contents of the patient queue:
+[1] Patient: Sam, triage: 1, temperature: 37, oxygen: 79, RR: 36, HR: 133, BP: 75
+[3] Patient: Mia, triage: 3, temperature: 33, oxygen: 93, RR: 28, HR: 118, BP: 98
+[5] Patient: Liz, triage: 5, temperature: 37, oxygen: 98, RR: 26, HR: 70, BP: 100
+[3] Patient: John, triage: 3, temperature: 39, oxygen: 91, RR: 27, HR: 115, BP: 110
+[2] Patient: Nick, triage: 2, temperature: 37, oxygen: 85, RR: 34, HR: 125, BP: 85
+[4] Patient: Eva, triage: 4, temperature: 37, oxygen: 95, RR: 22, HR: 115, BP: 95
+
+Dump queue1 after merging with queue2:
+(((5:Liz)3:Mia(3:John))1:Sam((4:Eva)2:Nick))
+
+Contents of queue1 after changing the priority function to priorityFn2:
+Contents of the patient queue:
+[1] Patient: Sam, triage: 1, temperature: 37, oxygen: 79, RR: 36, HR: 133, BP: 75
+[2] Patient: Nick, triage: 2, temperature: 37, oxygen: 85, RR: 34, HR: 125, BP: 85
+[5] Patient: Liz, triage: 5, temperature: 37, oxygen: 98, RR: 26, HR: 70, BP: 100
+[3] Patient: John, triage: 3, temperature: 39, oxygen: 91, RR: 27, HR: 115, BP: 110
+[3] Patient: Mia, triage: 3, temperature: 33, oxygen: 93, RR: 28, HR: 118, BP: 98
+[4] Patient: Eva, triage: 4, temperature: 37, oxygen: 95, RR: 22, HR: 115, BP: 95
+
+Dump queue1 after changing the priority function to priorityFn2:
+(((5:Liz)2:Nick(3:John))1:Sam((4:Eva)3:Mia))
+
+Contents of queue1 after changing the priority function back to priorityFn1:
+Contents of the patient queue:
+[1] Patient: Sam, triage: 1, temperature: 37, oxygen: 79, RR: 36, HR: 133, BP: 75
+[2] Patient: Nick, triage: 2, temperature: 37, oxygen: 85, RR: 34, HR: 125, BP: 85
+[5] Patient: Liz, triage: 5, temperature: 37, oxygen: 98, RR: 26, HR: 70, BP: 100
+[3] Patient: John, triage: 3, temperature: 39, oxygen: 91, RR: 27, HR: 115, BP: 110
+[3] Patient: Mia, triage: 3, temperature: 33, oxygen: 93, RR: 28, HR: 118, BP: 98
+[4] Patient: Eva, triage: 4, temperature: 37, oxygen: 95, RR: 22, HR: 115, BP: 95
+
+Dump queue1 after changing the priority function back to priorityFn1:
+(((5:Liz)2:Nick(3:John))1:Sam((4:Eva)3:Mia))
+
+Final queue1 in priority order:
+[1] Patient: Sam, triage: 1, temperature: 37, oxygen: 79, RR: 36, HR: 133, BP: 75
+[2] Patient: Nick, triage: 2, temperature: 37, oxygen: 85, RR: 34, HR: 125, BP: 85
+[3] Patient: Mia, triage: 3, temperature: 33, oxygen: 93, RR: 28, HR: 118, BP: 98
+[3] Patient: John, triage: 3, temperature: 39, oxygen: 91, RR: 27, HR: 115, BP: 110
+[4] Patient: Eva, triage: 4, temperature: 37, oxygen: 95, RR: 22, HR: 115, BP: 95
+[5] Patient: Liz, triage: 5, temperature: 37, oxygen: 98, RR: 26, HR: 70, BP: 100
